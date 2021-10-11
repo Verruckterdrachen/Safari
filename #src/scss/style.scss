@@ -89,6 +89,8 @@ body {
 	flex: 1 1 auto;
 	&__hero {
 	}
+	&__countries {
+	}
 }
 //===================================================================================================================================
 .hero {
@@ -176,6 +178,52 @@ body {
 			&:hover {
 				border: 1px solid $mainColor;
 				background-color: $mainColor;
+			}
+		}
+	}
+}
+//====================================================================================================
+.countries {
+	@include adaptiv-value("padding-top", 100, 50, 1);
+	@include adaptiv-value("padding-bottom", 100, 50, 1);
+	&__container {
+		display: grid;
+		@include adaptiv-value("gap", 33, 15, 1);
+		grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+		@media (max-width: $md4+px) {
+			margin: 0px -15px;
+		}
+	}
+	&__item {
+		@media (min-width: $md4+px) {
+			border: 1px solid $greyColor;
+		}
+		border-bottom: 1px solid $greyColor;
+	}
+	&__image {
+		display: block;
+		padding: 0px 0px math.div(110, 256) * 100% 0px;
+		overflow: hidden;
+		img {
+			transition: transform 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
+	&__title {
+		padding: 12px 19px 19px;
+		a {
+			color: inherit;
+			line-height: math.div(18.75, $fontSize) * 100%;
+			transition: color 0.3s;
+			transition: color 0.3s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: lighten($mainColor, 50%);
+				}
 			}
 		}
 	}

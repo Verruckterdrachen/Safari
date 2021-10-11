@@ -1149,3 +1149,68 @@ body.ie ._ibg img {
     background-color: #1f1e1e;
   }
 }
+
+.countries {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media (max-width: 1120px) {
+  .countries {
+    padding-top: calc(50px + 50 * ((100vw - 320px) / 800));
+  }
+}
+@media (max-width: 1120px) {
+  .countries {
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 800));
+  }
+}
+.countries__container {
+  display: grid;
+  gap: 33px;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+}
+@media (max-width: 1120px) {
+  .countries__container {
+    gap: calc(15px + 18 * ((100vw - 320px) / 800));
+  }
+}
+@media (max-width: 479.98px) {
+  .countries__container {
+    margin: 0px -15px;
+  }
+}
+.countries__item {
+  border-bottom: 1px solid #c4c4c4;
+}
+@media (min-width: 479.98px) {
+  .countries__item {
+    border: 1px solid #c4c4c4;
+  }
+}
+.countries__image {
+  display: block;
+  padding: 0px 0px 42.96875% 0px;
+  overflow: hidden;
+}
+.countries__image img {
+  transition: transform 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .countries__image img:hover {
+    transform: scale(1.05);
+  }
+}
+.countries__title {
+  padding: 12px 19px 19px;
+}
+.countries__title a {
+  color: inherit;
+  line-height: 117.1875%;
+  transition: color 0.3s;
+  transition: color 0.3s;
+}
+@media (any-hover: hover) {
+  .countries__title a:hover {
+    color: #a09c9c;
+  }
+}
