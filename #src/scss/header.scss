@@ -23,6 +23,17 @@
 			}
 		}
 	}
+	@media (max-height: 800px) {
+		.header__top {
+			min-height: 80px;
+		}
+		.header__menu {
+			border-bottom: 0;
+			@media (min-width: $md3+px) {
+				padding: 10px 0px;
+			}
+		}
+	}
 	&__top {
 		display: flex;
 		align-items: center;

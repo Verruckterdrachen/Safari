@@ -42,7 +42,6 @@ $accentColor: #886239;
 @import "null";
 body {
 	color: $mainColor;
-	background-color: #333;
 	&._lock {
 		overflow: hidden;
 	}
@@ -88,7 +87,97 @@ body {
 //<ОСНОВНОЙ БЛОК>====================================================================================================
 .page {
 	flex: 1 1 auto;
+	&__hero {
+	}
 }
 //===================================================================================================================================
-
+.hero {
+	position: relative;
+	display: flex;
+	min-height: 100vh;
+	background-image: url("../img/hero/bg.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@media (max-height: 800px) {
+		.hero__title,
+		.hero__desc {
+			color: #fff;
+		}
+		background-color: rgba(#000, 0.5);
+		background-blend-mode: overlay;
+	}
+	@media (max-width: 1050px) {
+		.hero__title,
+		.hero__desc {
+			color: #fff;
+		}
+		background-color: rgba(#000, 0.5);
+		background-blend-mode: overlay;
+	}
+	&__container {
+		position: relative;
+		display: flex;
+		flex: 1 1 auto;
+	}
+	&__body {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: center;
+		padding: 220px 0px 75px 0px;
+		transition: padding 0.3s;
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+		@media (max-height: 800px) {
+			padding: 140px 0px 75px 0px;
+		}
+		@media (max-width: $md3+px) {
+			padding: 80px 0px;
+		}
+	}
+	&__title {
+		align-self: center;
+		margin: 0px 0px math.div(40, 90) * 1em 0px;
+		font-family: "PT Serif";
+		@include adaptiv-value("font-size", 90, 54, 1);
+		line-height: 130%;
+		@media (min-width: $md3+px) {
+			text-align: center;
+			flex: 1 1 auto;
+		}
+	}
+	&__desc {
+		max-width: 422px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 140%;
+		margin: 0px 0px math.div(20, 20) * 1em 0px;
+	}
+	&__link {
+		margin: 0px 0px 20px 0px;
+	}
+	&__button {
+		position: absolute;
+		bottom: 15px;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 40px;
+		height: 40px;
+		border: 1px solid #fff;
+		border-radius: 50%;
+		transition: border 0.3s, background-color 0.3s;
+		&::before {
+			color: #fff;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid $mainColor;
+				background-color: $mainColor;
+			}
+		}
+	}
+}
 //</ОСНОВНОЙ БЛОК>====================================================================================================
