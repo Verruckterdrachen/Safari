@@ -1068,7 +1068,6 @@ body.ie ._ibg img {
     margin-bottom: calc(50px + 50 * ((100vw - 320px) / 800));
   }
 }
-
 .hero {
   position: relative;
   display: flex;
@@ -1435,4 +1434,205 @@ body.ie ._ibg img {
   line-height: 130%;
   line-height: 130%;
   margin: 0px 0px 0.9375em 0px;
+}
+
+.about {
+  padding-bottom: 100px;
+}
+@media (max-width: 1120px) {
+  .about {
+    padding-bottom: calc(50px + 50 * ((100vw - 320px) / 800));
+  }
+}
+@media (min-width: 991.98px) {
+  .about__container {
+    display: grid;
+    gap: 32px;
+    grid-template-columns: 1fr 640px;
+  }
+}
+.about__content > *:last-child {
+  margin-bottom: 0;
+}
+@media (max-width: 991.98px) {
+  .about__content {
+    margin: 0px 0px 40px 0px;
+  }
+}
+.about__title {
+  font-weight: 500;
+  margin: 0px 0px 0.6944444444em 0px;
+}
+.about__text {
+  font-size: 18px;
+  line-height: 140%;
+  margin: 0px 0px 1.7777777778em 0px;
+}
+.about__link {
+  color: #c4c4c4;
+  text-decoration: underline;
+  line-height: 117.1875%;
+  margin: 0px 0px 1.5625em 0px;
+}
+@media (any-hover: hover) {
+  .about__link:hover {
+    text-decoration: none;
+  }
+}
+.about__video {
+  position: relative;
+}
+.about__video video {
+  max-width: 100%;
+}
+@media (max-width: 991.98px) {
+  .about__video {
+    margin: 0px -15px;
+  }
+}
+.about__button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 73px;
+  height: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #1f1e1e;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  transform: translate(-50%, -50%);
+}
+@media (any-hover: hover) {
+  .about__button:hover {
+    box-shadow: 0 0 20px 4px rgba(0, 0, 0, 0.5);
+    background-color: #111;
+  }
+  .about__button:hover::before {
+    color: #fff;
+  }
+}
+.about__button::before {
+  padding: 0px 0px 0px 10px;
+  font-size: 35px;
+  color: #c4c4c4;
+  transition: color 0.3s;
+}
+
+.gallery {
+  padding-top: 55px;
+  padding-bottom: 105px;
+  background-color: #886239;
+}
+@media (max-width: 1120px) {
+  .gallery {
+    padding-top: calc(40px + 15 * ((100vw - 320px) / 800));
+  }
+}
+@media (max-width: 1120px) {
+  .gallery {
+    padding-bottom: calc(65px + 40 * ((100vw - 320px) / 800));
+  }
+}
+
+@media (max-width: 767.98px) {
+  .slider-gallery {
+    margin: 0px -15px;
+  }
+}
+.slider-gallery__head {
+  text-align: center;
+  margin: 0px 0px 35px 0px;
+}
+@media (min-width: 479.98px) {
+  .slider-gallery__head {
+    display: flex;
+    align-items: center;
+    text-align: left;
+  }
+}
+@media (max-width: 767.98px) {
+  .slider-gallery__head {
+    margin: 0px 15px 35px;
+  }
+}
+.slider-gallery__title {
+  margin: 0px 0px 0.5555555556em 0px;
+}
+@media (min-width: 479.98px) {
+  .slider-gallery__title {
+    flex: 1 1 auto;
+    margin: 0px 0px 0px 0px;
+  }
+}
+.slider-gallery__link {
+  color: #fff;
+  line-height: 117.1875%;
+  text-decoration: underline;
+}
+@media (min-width: 767.98px) {
+  .slider-gallery__link {
+    margin: 0px 55px 0px 0px;
+  }
+}
+@media (any-hover: hover) {
+  .slider-gallery__link:hover {
+    text-decoration: none;
+  }
+}
+.slider-gallery__arrows {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .slider-gallery__arrows {
+    display: none;
+  }
+}
+.slider-gallery__image {
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0px 0px 256px 0px;
+}
+.slider-gallery__image img {
+  transition: transform 0.3s ease 0s;
+}
+@media (any-hover: hover) {
+  .slider-gallery__image:hover img {
+    transform: scale(1.05);
+  }
+}
+.slider-gallery__image:first-child {
+  margin: 0px 0px 30px 0px;
+}
+@media (max-width: 767.98px) {
+  .slider-gallery__image:first-child {
+    margin: 0px 0px 15px 0px;
+  }
+}
+
+.slider-arrow {
+  cursor: pointer;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid #c4c4c4;
+  transition: background-color 0.3s, border 0.3s;
+}
+.slider-arrow::before {
+  color: #fff;
+}
+.slider-arrow_prev {
+  margin: 0px 16px 0px 0px;
+}
+.slider-arrow_prev::before {
+  transform: rotate(-180deg);
+}
+@media (any-hover: hover) {
+  .slider-arrow:hover {
+    background-color: #1f1e1e;
+    border: 1px solid #1f1e1e;
+  }
 }

@@ -96,6 +96,10 @@ body {
 	&__offers {
 		@include adaptiv-value("margin-bottom", 100, 50, 1);
 	}
+	&__about {
+	}
+	&__gallery {
+	}
 }
 //===================================================================================================================================
 .hero {
@@ -421,6 +425,177 @@ body {
 		line-height: 130%;
 		line-height: 130%;
 		margin: 0px 0px math.div(15, $fontSize) * 1em 0px;
+	}
+}
+.about {
+	@include adaptiv-value("padding-bottom", 100, 50, 1);
+	&__container {
+		@media (min-width: $md2+px) {
+			display: grid;
+			gap: 32px;
+			grid-template-columns: 1fr 640px;
+		}
+	}
+	&__content {
+		& > *:last-child {
+			margin-bottom: 0;
+		}
+		@media (max-width: $md2+px) {
+			margin: 0px 0px 40px 0px;
+		}
+	}
+	&__title {
+		font-weight: 500;
+		margin: 0px 0px math.div(25, 36) * 1em 0px;
+	}
+	&__text {
+		font-size: 18px;
+		line-height: 140%;
+		margin: 0px 0px math.div(32, 18) * 1em 0px;
+	}
+	&__link {
+		color: $greyColor;
+		text-decoration: underline;
+		line-height: math.div(18.75, $fontSize) * 100%;
+		margin: 0px 0px math.div(25, $fontSize) * 1em 0px;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__video {
+		position: relative;
+		video {
+			max-width: 100%;
+		}
+		@media (max-width: $md2+px) {
+			margin: 0px -15px;
+		}
+	}
+	&__button {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 73px;
+		height: 73px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background-color: $mainColor;
+		transition: background-color 0.3s, box-shadow 0.3s;
+		transform: translate(-50%, -50%);
+		@media (any-hover: hover) {
+			&:hover {
+				box-shadow: 0 0 20px 4px rgba(#000, 0.5);
+				background-color: #111;
+				&::before {
+					color: #fff;
+				}
+			}
+		}
+		&::before {
+			padding: 0px 0px 0px 10px;
+			font-size: 35px;
+			color: #c4c4c4;
+			transition: color 0.3s;
+		}
+	}
+}
+//====================================================================================================
+.gallery {
+	@include adaptiv-value("padding-top", 55, 40, 1);
+	@include adaptiv-value("padding-bottom", 105, 65, 1);
+	background-color: $accentColor;
+}
+.slider-gallery {
+	@media (max-width: $md3+px) {
+		margin: 0px -15px;
+	}
+	&__head {
+		text-align: center;
+		margin: 0px 0px 35px 0px;
+		@media (min-width: $md4+px) {
+			display: flex;
+			align-items: center;
+			text-align: left;
+		}
+		@media (max-width: $md3+px) {
+			margin: 0px 15px 35px;
+		}
+	}
+	&__title {
+		@media (min-width: $md4+px) {
+			flex: 1 1 auto;
+			margin: 0px 0px 0px 0px;
+		}
+		margin: 0px 0px math.div(20, 36) * 1em 0px;
+	}
+	&__link {
+		color: #fff;
+		line-height: math.div(18.75, $fontSize) * 100%;
+		text-decoration: underline;
+		@media (min-width: $md3+px) {
+			margin: 0px 55px 0px 0px;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__arrows {
+		display: flex;
+		align-items: center;
+		@media (max-width: $md3+px) {
+			display: none;
+		}
+	}
+	&__image {
+		cursor: pointer;
+		overflow: hidden;
+		padding: 0px 0px 256px 0px;
+		img {
+			transition: transform 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.05);
+				}
+			}
+		}
+		&:first-child {
+			margin: 0px 0px 30px 0px;
+			@media (max-width: $md3+px) {
+				margin: 0px 0px 15px 0px;
+			}
+		}
+	}
+}
+.slider-arrow {
+	cursor: pointer;
+	flex: 0 0 44px;
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1px solid $greyColor;
+	transition: background-color 0.3s, border 0.3s;
+	&::before {
+		color: #fff;
+	}
+	&_prev {
+		margin: 0px 16px 0px 0px;
+		&::before {
+			transform: rotate(-180deg);
+		}
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: $mainColor;
+			border: 1px solid $mainColor;
+		}
 	}
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
