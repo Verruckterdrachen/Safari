@@ -167,7 +167,7 @@ textarea.input {
 		opacity: 0;
 		visibility: hidden;
 		&:checked + .checkbox__text:before {
-			background: #fff url("../img/icons/check.svg") center no-repeat;
+			background: $greyColor url("../img/icons/check.svg") center no-repeat;
 		}
 	}
 	// .checkbox__text
@@ -176,21 +176,21 @@ textarea.input {
 		align-items: center;
 		position: relative;
 		font-size: 16px;
-		color: #ffffff;
+		text-decoration: underline;
 		letter-spacing: -0.3px;
-		line-height: calc(20 / 16);
+		line-height: 130%;
 		cursor: pointer;
 		&:before {
 			content: "";
 			align-self: flex-start;
-			margin: 0px 14px 0px 0px;
-			flex: 0 0 20px;
+			margin: 0px 19px 0px 0px;
+			flex: 0 0 26px;
 			left: 0;
 			top: 0;
-			width: 20px;
-			height: 18px;
-			background: #fff;
-			border: 1px solid #a7a9ac;
+			width: 26px;
+			height: 26px;
+			border-radius: 2px;
+			border: 1px solid $greyColor;
 		}
 	}
 	a {

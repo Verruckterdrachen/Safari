@@ -413,6 +413,27 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__booking booking">
+				<div class="booking__container _container">
+					<h2 class="booking__title section-title">Забронируйте отдых в Африке</h2>
+					<form action="#" class="booking__form form-booking">
+						<div class="form-booking__body">
+							<input autocomplete="off" type="text" name="form[]" data-value="Ваше имя" class="form-booking__input">
+							<input autocomplete="off" type="phone" name="form[]" data-value="Телефон" class="form-booking__input">
+							<input autocomplete="off" type="email" name="form[]" data-value="E-mail" class="form-booking__input">
+							<textarea autocomplete="off" name="form[]" data-value="Комментарий"
+								class="form-booking__input"></textarea>
+						</div>
+						<div class="form-booking__bottom">
+							<button type="submit" class="form-booking__button button">Отправить заявку</button>
+							<label class="form-booking__checkbox checkbox">
+								<input class="checkbox__input" type="checkbox" value="1" name="form[]">
+								<span class="checkbox__text">Согласие на обработку персональных данных</span>
+							</label>
+						</div>
+					</form>
+				</div>
+			</section>
 		</main>
 		@@include('_footer.html',{})
 	</div>
