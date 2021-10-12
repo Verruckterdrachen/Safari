@@ -1,5 +1,55 @@
-footer {
-}
 //====================================================================================================
-
+.footer {
+	@include adaptiv-value("padding-top", 80, 40, 1);
+	@include adaptiv-value("padding-bottom", 80, 40, 1);
+	background-color: $mainColor;
+	&__logo {
+		text-align: center;
+		@include adaptiv-value("margin-bottom", 70, 40, 1);
+	}
+	&__content {
+		max-width: 860px;
+		margin: 0px auto;
+		display: grid;
+		@include adaptiv-value("gap", 100, 30, 1);
+		color: #fff;
+		@media (min-width: $md3+px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+	&__item {
+		& > * {
+			font-size: 14px;
+			line-height: 130%;
+		}
+		@media (max-width: $md3+px) {
+			text-align: center;
+		}
+	}
+	&__title {
+		font-weight: 500;
+		margin: 0px 0px math.div(10, 14) * 1em 0px;
+	}
+	&__text {
+		color: rgba(#fff, 0.8);
+	}
+	&__policy {
+		color: inherit;
+		text-decoration: underline;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	&__link {
+		display: block;
+		color: rgba(#fff, 0.8);
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
 //====================================================================================================
