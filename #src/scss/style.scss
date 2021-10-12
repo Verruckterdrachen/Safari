@@ -100,6 +100,8 @@ body {
 	}
 	&__gallery {
 	}
+	&__features {
+	}
 }
 //===================================================================================================================================
 .hero {
@@ -596,6 +598,64 @@ body {
 			background-color: $mainColor;
 			border: 1px solid $mainColor;
 		}
+	}
+}
+//====================================================================================================
+.features {
+	@include adaptiv-value("padding-top", 100, 50, 1);
+	@include adaptiv-value("padding-bottom", 80, 50, 1);
+	&__title {
+		text-align: center;
+		text-transform: uppercase;
+		@include adaptiv-value("margin-bottom", 77, 30, 1);
+	}
+	&__desc {
+		@include adaptiv-value("padding-bottom", 65, 35, 1);
+		margin: 0px 0px 24px 0px;
+		border-bottom: 1px solid $greyColor;
+		@media (min-width: $md2+px) {
+			display: grid;
+			gap: 46px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+	&__text {
+		p {
+			font-size: 18px;
+			line-height: 140%;
+			&:not(:last-child) {
+				margin: 0px 0px math.div(30, 18) * 1em 0px;
+			}
+			span {
+				text-transform: uppercase;
+				font-weight: 700;
+			}
+		}
+	}
+	&__items {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		margin: 0px -20px;
+		@media (max-width: 1050px) {
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+	&__item {
+		text-align: center;
+		padding: 20px;
+	}
+	&__value {
+		margin: 0px 0px math.div(5, 58) * 1em 0px;
+		font-family: "PT Serif";
+		color: $accentColor;
+		@include adaptiv-value("font-size", 58, 44, 1);
+	}
+	&__info {
+		@include adaptiv-value("font-size", 20, 18, 1);
+		font-weight: 500;
+		line-height: 130%;
 	}
 }
 //</ОСНОВНОЙ БЛОК>====================================================================================================
